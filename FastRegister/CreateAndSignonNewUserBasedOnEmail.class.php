@@ -34,6 +34,7 @@ class CreateAndSignonNewUserBasedOnEmail{
 		$url =  getUrl($_SERVER);
 		//$url = "http://localhost";
 		wp_redirect($url);
+		die ('weird');
 	}
 	
 	
