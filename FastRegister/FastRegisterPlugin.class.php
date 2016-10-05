@@ -1,0 +1,33 @@
+<?php
+
+namespace FastRegister;
+
+class FastRegisterPlugin{
+	
+	public function __construct(){
+		$this->doAutoloader();
+	}
+	
+	public function doAutoloader(){
+		include_once('FastRegisterAutoloader.class.php');
+		$FastRegisterAutoloader = new FastRegisterAutoloader;
+	}
+	
+	public function enableShortCode_fastRegister(){
+		add_shortcode('fast-register', array($this, 'doShortCode_fastRegister'));
+	}
+
+	public function enableFormListener(){
+		//The plugin listens for a form variable to be submitted:
+		if (isset($_POST['CRG-fast-register-email'])){
+			$fastRegisterEmail = $_POST['CRG-fast-register-email'];
+			$IncomingEmailHandler = new IncomingEmailHandler($fastRegisterEmail);
+		}
+	}
+	
+	public function doShortCode_fastRegister(){
+		$SHORTCODE_fastRegister = new SHORTCODE_fastRegister;
+		return $SHORTCODE_fastRegister->returnHTMLOutput();
+	}
+	
+}
