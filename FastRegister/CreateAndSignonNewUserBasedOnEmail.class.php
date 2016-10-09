@@ -30,7 +30,7 @@ class CreateAndSignonNewUserBasedOnEmail{
 			die('line 31');
 		}
 		//gets the current url:
-		$url =  getUrl($_SERVER);
+		//$url =  getUrl($_SERVER);
 		//$url = "http://localhost";
 		//wp_redirect($url);
 		die($url);
