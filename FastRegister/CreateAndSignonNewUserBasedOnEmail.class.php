@@ -12,9 +12,8 @@ class CreateAndSignonNewUserBasedOnEmail{
 		wp_set_auth_cookie( $user->ID, TRUE );
 		//either 'administrator', 'subscriber', 'editor', 'author', 'contributor':
 		$user->set_role( 'subscriber' );
-		$first_name = "Bill";
-		$last_name = "McGee";
-		$user_id = wp_update_user( array( 'ID' => $user_id, 'first_name' => $first_name, 'last_name' => $last_name ) );
+		$first_name = $this->trimDomainFromEmail($email);
+		$user_id = wp_update_user( array( 'ID' => $user_id, 'first_name' => $first_name) );
 		$creds = array();
 		$creds['user_login'] = $email;
 		$creds['user_password'] = $password;
