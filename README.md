@@ -1,4 +1,4 @@
-One of the problems with wordpress is the registration process. Which goes:
+One of the problems with wordpress is the registration process, is that it is very cumbersome. Which goes:
 
 1. Go to the registration form
 2. Send user a random password based on their email
@@ -6,4 +6,7 @@ One of the problems with wordpress is the registration process. Which goes:
 4. Log in
 5. Change their password.
 
-This method DOES in fact force the user to prove they own the email account. But what if you don't care about that? What if you just want to log themin without forcing them to confirm the email. There are many reasons to want this.
+This method DOES, in fact, force the user to prove they own the email account. But what if you don't care about that? What if you just want to log themin without forcing them to confirm the email. There are many reasons to want this.
+
+This plugin:
+Allows for a sidebar widget or shortcode post form that simply asks for the user's email. If they enter a valid e-mail, the site simply logs them on.
