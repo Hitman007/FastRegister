@@ -1,4 +1,4 @@
-One of the problems with wordpress is the registration process, is that it is very cumbersome. Which goes:
+One of the problems with wordpress is the registration process. It is that it is very cumbersome. Which goes:
 
 1. Direct the user to the registration form.
 2. Send the user a random password based on their email.
