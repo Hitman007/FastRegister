@@ -6,7 +6,6 @@ class FastRegisterPlugin{
 	
 	public function __construct(){
 		$this->doAutoloader();
-		//$SidebarWidget = new SidebarWidget();
 	}
 	
 	public function doAutoloader(){
@@ -32,7 +31,7 @@ class FastRegisterPlugin{
 	}
 	
 	public function enableSidebarWidget(){
-		//$SidebarWidget = new SidebarWidget;
+		$SidebarWidget = new SidebarWidget;
 	}
 	
 }
