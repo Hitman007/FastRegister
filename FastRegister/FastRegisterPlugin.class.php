@@ -32,7 +32,7 @@ class FastRegisterPlugin{
 	}
 	
 	public function enableSidebarWidget(){
-		$SidebarWidget = new SidebarWidget;
+		//$SidebarWidget = new SidebarWidget;
 	}
 	
 }
