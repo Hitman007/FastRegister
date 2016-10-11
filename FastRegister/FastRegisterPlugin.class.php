@@ -31,4 +31,8 @@ class FastRegisterPlugin{
 		return $SHORTCODE_fastRegister->returnHTMLOutput();
 	}
 	
+	public function enableSidebarWidget(){
+		$SidebarWidget = new SidebarWidget;
+	}
+	
 }
