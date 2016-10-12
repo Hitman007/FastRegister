@@ -15,7 +15,7 @@ require "FastRegister/FastRegisterPlugin.class.php";
 $FastRegisterPlugin = new FastRegisterPlugin;
 
 $FastRegisterPlugin->enableShortCode_fastRegister();
-$FastRegisterPlugin->enableSidebarWidget();
-//$FastRegisterPlugin->enableFormListener();
+//$FastRegisterPlugin->enableSidebarWidget();
+$FastRegisterPlugin->enableFormListener();
 
 include ("FastRegister/SidebarWidget.class.php");
