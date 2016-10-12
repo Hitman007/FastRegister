@@ -1,9 +1,7 @@
 <?php
 
-namespace FastRegister;
-
 // Creating the widget 
-class SidebarWidget extends \WP_Widget {
+class SidebarWidget extends WP_Widget {
 
 function __construct() {
 parent::__construct(
