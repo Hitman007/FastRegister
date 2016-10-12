@@ -9,10 +9,10 @@ parent::__construct(
 'wpb_widget', 
 
 // Widget name will appear in UI
-__('WPBeginner Widget', 'wpb_widget_domain'), 
+__('Custom Ray Guns FastRegister', 'wpb_widget_domain'), 
 
 // Widget description
-array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), ) 
+array( 'description' => __( 'The fastest way to capture subscribers for your blog.', 'wpb_widget_domain' ), ) 
 );
 }
 
