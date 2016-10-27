@@ -25,7 +25,7 @@ $FastRegisterPlugin->enableFormListener();
 /**
  * Adds Foo_Widget widget.
  */
-class Foo_Widget extends WP_Widget {
+class Foo_Widget extends \WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
@@ -93,6 +93,6 @@ class Foo_Widget extends WP_Widget {
 
 // register Foo_Widget widget
 function register_foo_widget() {
-	register_widget( 'Foo_Widget' );
+	register_widget( 'FastRegister\Foo_Widget' );
 }
 add_action( 'widgets_init', 'register_foo_widget' );
