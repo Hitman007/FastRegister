@@ -3,7 +3,6 @@
 namespace FastRegister;
 
 class FastRegisterSidebarWidget extends \WP_Widget {
-	dd
 	function __construct() {
 		parent::__construct(
 				'foo_widget', // Base ID
@@ -64,8 +63,3 @@ class FastRegisterSidebarWidget extends \WP_Widget {
 	}
 
 } // class Foo_Widget
-
-// register Foo_Widget widget
-function register_foo_widget() {
-	register_widget( 'FastRegister\Foo_Widget' );
-}
