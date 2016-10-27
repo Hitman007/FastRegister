@@ -10,7 +10,7 @@ Author URI: http://customrayguns.com/
 
 namespace FastRegister;
 
-die ('FastRegister.php');
+//die ('FastRegister.php');
 
 require "FastRegister/FastRegisterPlugin.class.php";
 
