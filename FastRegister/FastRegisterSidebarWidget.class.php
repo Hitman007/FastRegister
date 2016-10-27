@@ -4,7 +4,7 @@ namespace FastRegister;
 
 class FastRegisterSidebarWidget extends \WP_Widget {
 	function __construct() {
-       	    parent::__construct( 'baseID', 'name' );
+       	    parent::__construct( 'FastRegister', 'Foo_Widget');
     }
 
 	/**
