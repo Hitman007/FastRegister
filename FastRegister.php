@@ -95,4 +95,4 @@ class Foo_Widget extends \WP_Widget {
 function register_foo_widget() {
 	register_widget( 'FastRegister\Foo_Widget' );
 }
-add_action( 'widgets_init', 'register_foo_widget' );
+add_action( 'widgets_init', 'FastRegister\register_foo_widget' );
