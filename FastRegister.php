@@ -20,7 +20,7 @@ $FastRegisterPlugin->enableShortCode_fastRegister();
 //$FastRegisterPlugin->enableSidebarWidget();
 $FastRegisterPlugin->enableFormListener();
 
-class RandomPostWidget extends WP_Widget
+class RandomPostWidget extends \WP_Widget
 {
 	function RandomPostWidget()
 	{
@@ -61,4 +61,4 @@ class RandomPostWidget extends WP_Widget
   }
  
 }
-add_action( 'widgets_init', create_function('', 'return register_widget("RandomPostWidget");') );?>
+add_action( 'widgets_init', create_function('', 'return register_widget("FastRegister\RandomPostWidget");') );?>
