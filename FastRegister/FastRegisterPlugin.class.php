@@ -33,7 +33,8 @@ class FastRegisterPlugin{
 	
 	public function enableSidebarWidget(){
 		//die('enableSidebarWidget')
-			register_widget( 'Foo_Widget' );
+		$FastRegisterSidebarWidget = NEW FastRegisterSidebarWidget;
+		register_widget( 'Foo_Widget' );
 	}
 	
 }
