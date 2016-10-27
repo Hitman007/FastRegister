@@ -4,12 +4,8 @@ namespace FastRegister;
 
 class FastRegisterSidebarWidget extends \WP_Widget {
 	function __construct() {
-		parent::__construct(
-				'foo_widget', // Base ID
-				esc_html__( 'Widget Title', 'text_domain' ), // Name
-				array( 'description' => esc_html__( 'A Foo Widget', 'text_domain' ), ) // Args
-				);
-	}
+       	    parent::__construct( 'baseID', 'name' );
+    }
 
 	/**
 	 * Front-end display of widget.
@@ -61,5 +57,5 @@ class FastRegisterSidebarWidget extends \WP_Widget {
 
 		return $instance;
 	}
-
-} // class Foo_Widget
+} 
+// class Foo_Widget
