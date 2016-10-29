@@ -36,9 +36,9 @@ add_action( 'widgets_init', function(){
 			$output = <<<output
 		
 			<form method = 'post'>
-			<input type = 'text' name = 'crg_emial' id = 'crg_email' placeholder = 'Email' />
-			<br />
-			<input type = 'submit' />
+				<input type = 'text' name = "CRG-fast-register-email" id = "CRG-fast-register-email"  placeholder = 'Email' />
+				<br />
+				<input type = 'submit' />
 			</form>
 			
 output;
