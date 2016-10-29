@@ -33,7 +33,16 @@ add_action( 'widgets_init', function(){
 			if ( ! empty( $instance['title'] ) ) {
 				echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 			}
-			echo __( 'Hello, World!', 'text_domain' );
+			$output = <<<
+		
+			<form method = 'post'>
+			<input type = 'text' name = 'crg_emial' id = 'crg_email' />
+			<br />
+			<input type = 'submit' />
+			</form>
+			
+		>>>output;
+			echo $output;
 			echo $args['after_widget'];
 		}
 		/**
