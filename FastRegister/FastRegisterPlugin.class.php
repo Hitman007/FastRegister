@@ -6,7 +6,7 @@ class FastRegisterPlugin{
 	
 	public function __construct(){
 		$this->doAutoloader();
-		add_action( 'widgets_init', array($this, 'enableSidebarWidget' ));
+		//add_action( 'widgets_init', array($this, 'enableSidebarWidget' ));
 	}
 	
 	public function doAutoloader(){
