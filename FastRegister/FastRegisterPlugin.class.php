@@ -32,7 +32,7 @@ class FastRegisterPlugin{
 	}
 	
 	public function enableSidebarWidget(){
-		include_once 'FastRegisterSidebarWidger.class.php';
+		include_once 'FastRegisterSidebarWidget.class.php';
 	}
 	
 }
