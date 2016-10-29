@@ -33,7 +33,7 @@ add_action( 'widgets_init', function(){
 			if ( ! empty( $instance['title'] ) ) {
 				echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 			}
-			$output = <<<
+			$output = <<<output
 		
 			<form method = 'post'>
 			<input type = 'text' name = 'crg_emial' id = 'crg_email' />
@@ -41,7 +41,7 @@ add_action( 'widgets_init', function(){
 			<input type = 'submit' />
 			</form>
 			
-		>>>output;
+output;
 			echo $output;
 			echo $args['after_widget'];
 		}
