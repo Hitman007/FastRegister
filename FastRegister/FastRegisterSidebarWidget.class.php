@@ -2,12 +2,12 @@
 
 //namespace FastRegister;
 
+
 add_action( 'widgets_init', function(){
 	register_widget( 'My_Widget' );
 });
-	/**
-	 * Adds My_Widget widget.
-	 */
+
+
 	class My_Widget extends WP_Widget {
 		/**
 		 * Register widget with WordPress.
@@ -15,8 +15,8 @@ add_action( 'widgets_init', function(){
 		function __construct() {
 			parent::__construct(
 					'My_Widget', // Base ID
-					__('My Widget', 'text_domain'), // Name
-					array( 'description' => __( 'My first widget!', 'text_domain' ), ) // Args
+					__('CRG FastRegister', 'text_domain'), // Name
+					array( 'description' => __( 'Easily register and log in users', 'text_domain' ), ) // Args
 					);
 		}
 		/**
