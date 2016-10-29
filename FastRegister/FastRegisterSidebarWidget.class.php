@@ -46,15 +46,10 @@ add_action( 'widgets_init', function(){
 		public function form( $instance ) {
 			$title = __( 'Sign Up for My Newsletter', 'text_domain' );
 			?>
-<div id = 'FastRegisterWidget'>
-	<h3>Sign up for my newsletter:</h3>
-	<form method = 'post'>
-	Email:
-	<input type  = 'text' name = 'CRG-fast-register-email' id = 'CRG-fast-register-email' placeholder = 'Type your email here' />
-	<br />
-	<input type = "submit" />
-	</form>
-</div> <!-- END:FastRegisterWidget -->
+		<p>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+		</p>
 		<?php 
 	}
 	/**
