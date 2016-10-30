@@ -41,7 +41,8 @@ add_action( 'widgets_init', function(){
 		public function echoMessageForFrontendContent(){
 			if ( is_user_logged_in() ) {
 				$current_user = wp_get_current_user();
-				echo( 'Hello, ds, %s!', esc_html( $current_user->nickname ) );
+				$name = $current_user->nickname;
+				echo ("Helo, $name!");
 			} else {
 				$output = <<<output
 			
