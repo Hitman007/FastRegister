@@ -33,6 +33,10 @@ add_action( 'widgets_init', function(){
 			if ( ! empty( $instance['title'] ) ) {
 				echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 			}
+			if ( is_user_logged_in() ) {
+				$current_user = wp_get_current_user();
+				printf( 'Personal Message For %s!', esc_html( $current_user->user_firstname ) );
+			} else {
 			$output = <<<output
 		
 			<form method = 'post'>
@@ -43,6 +47,8 @@ add_action( 'widgets_init', function(){
 			
 output;
 			echo $output;
+			}
+
 			echo $args['after_widget'];
 		}
 		/**
