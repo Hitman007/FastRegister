@@ -31,11 +31,26 @@ add_action( 'widgets_init', function(){
 
 			echo $args['before_widget'];
 			if ( ! empty( $instance['title'] ) ) {
-				echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
+				echo $args['before_title'];
+				echo apply_filters( 'widget_title', $instance['title'] );
+				echo $args['after_title'];
 			}
 			$this->echoMessageForFrontendContent();
 
 			echo $args['after_widget'];
+		}
+		
+		
+		public function echoTitleForFrontendContent(){
+			if ( is_user_logged_in() ) {
+				$current_user = wp_get_current_user();
+				$name = $current_user->nickname;
+				echo ("Helo, $name!");
+			} else {
+				$output = <<<output
+output;
+				echo $output;
+			}$utput;
 		}
 		
 		public function echoMessageForFrontendContent(){
@@ -45,17 +60,15 @@ add_action( 'widgets_init', function(){
 				echo ("Helo, $name!");
 			} else {
 				$output = <<<output
-			
 			<form method = 'post'>
 				<input type = 'text' name = "CRG-fast-register-email" id = "CRG-fast-register-email"  placeholder = 'Email' />
 				<br />
 				<input type = 'submit' />
 			</form>
-		
 output;
 				echo $output;
 			}
-		}
+			}
 		/**
 		 * Back-end widget form.
 		 *
