@@ -41,7 +41,9 @@ add_action( 'widgets_init', function(){
 		public function echoMessageForFrontendContent(){
 			if ( is_user_logged_in() ) {
 				$current_user = wp_get_current_user();
-				printf( 'Personal Message For %s!', esc_html( $current_user->user_firstname ) );
+				printf( 'ds, %s!', esc_html( $current_user->user_displayname ) );
+				printf( 'ds, %s!', esc_html( $current_user->user_nickname ) );
+				printf( 'ds, %s!', esc_html( $current_user->user_display ) );
 			} else {
 				$output = <<<output
 			
