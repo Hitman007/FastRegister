@@ -30,28 +30,15 @@ add_action( 'widgets_init', function(){
 		public function widget( $args, $instance ) {
 
 			echo $args['before_widget'];
-			$this->echoTitleForFrontendContent();
+			echo $args['before_title'];
+				if (!( is_user_logged_in() )) {
+					echo apply_filters( 'widget_title', $instance['title'] );
+				}
+			echo $args['after_title'];
 			$this->echoMessageForFrontendContent();
 			echo $args['after_widget'];
 		}
-		
-		
-		public function echoTitleForFrontendContent(){
-			if ( is_user_logged_in() ) {
-				if ( ! empty( $instance['title'] ) ) {
-					echo $args['before_title'];
-					//echo apply_filters( 'widget_title', $instance['title'] );
-					echo $args['after_title'];
-				}
-			 }else{
-				if ( ! empty( $instance['title'] ) ) {
-					echo $args['before_title'];
-					echo apply_filters( 'widget_title', $instance['title'] );
-					echo $args['after_title'];
-				}
-			}
-		}
-		
+				
 		public function echoMessageForFrontendContent(){
 			if ( is_user_logged_in() ) {
 				$current_user = wp_get_current_user();
