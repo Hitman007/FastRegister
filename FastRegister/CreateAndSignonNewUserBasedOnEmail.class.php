@@ -28,7 +28,7 @@ class CreateAndSignonNewUserBasedOnEmail{
 		if (isset($_SESSION['crg_login_redirect_url'])){
 			$crg_login_redirect_url = $_SESSION['crg_login_redirect_url'];
 			unset($_SESSION['crg_login_redirect_url']);
-			header($crg_login_redirect_url);
+			header("Location: $crg_login_redirect_url");
 			die("CreateAndSignonNewUserBasedOnEmail::createAndSignonUser".$crg_login_redirect_url);
 		}
 		//gets the current url:
