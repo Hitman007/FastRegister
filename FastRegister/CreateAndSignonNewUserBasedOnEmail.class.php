@@ -28,7 +28,7 @@ class CreateAndSignonNewUserBasedOnEmail{
 		if (isset($_SESSION['crg_login_redirect_url'])){
 			$crg_login_redirect_url = $_SESSION['crg_login_redirect_url'];
 			unset($_SESSION['crg_login_redirect_url']);
-			wp_redirect($crg_login_redirect_url);
+			header($crg_login_redirect_url);
 			die('line 30');
 		}
 		//gets the current url:
