@@ -21,10 +21,6 @@ class IncomingEmailValidator{
 		return $emailIsValid;
 	}
 	
-	public function doesEmailAlreadyExist($email){
-		
-	}
-	
 	public function isAnActualEmail($email){
 		//NOTE COMPLETE!
 		if (1 == 1){

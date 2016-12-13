@@ -24,6 +24,7 @@ class CreateAndSignonNewUserBasedOnEmail{
 		$trimmedEmail = $this->trimDomainFromEmail($email);
 		update_user_meta( $UserID, 'nickname', $trimmedEmail);
 		$wpdb->query("UPDATE $wpdb->users SET display_name = '$trimmedEmail' WHERE ID = $UserID");
+		session_start();
 		if (isset($_SESSION['crg_login_redirect_url'])){
 			$crg_login_redirect_url = $_SESSION['crg_login_redirect_url'];
 			unset($_SESSION['crg_login_redirect_url']);
