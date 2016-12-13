@@ -14,11 +14,16 @@ class IncomingEmailHandler{
 	public function validateEmail(){
 		//This function performs a series of tests.
 		$email = $this->email;
-		$isEmailValid = new IncomingEmailValidator($email);
-		if ($isEmailValid->returnBool($email)){
-			$CreateAndSignonNewUserBasedOnEmail = new CreateAndSignonNewUserBasedOnEmail;
-			$CreateAndSignonNewUserBasedOnEmail->createAndSignonUser($email);
+		$IncomingEmailValidator = new IncomingEmailValidator($email);
+		if (!(email_exists( $email ))){
+			if ($IncomingEmailValidator->isAValidEmail($email)){
+				session_start();
+				global $wp;
+				$current_url = home_url(add_query_arg(array(),$wp->request));
+				$_SESSION['crg_login_redirect_url'] = $current_url;
+				$CreateAndSignonNewUserBasedOnEmail = new CreateAndSignonNewUserBasedOnEmail;
+				$CreateAndSignonNewUserBasedOnEmail->createAndSignonUser($email);
+			}
 		}
-	}
-	
+	}	
 }

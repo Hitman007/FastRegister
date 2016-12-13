@@ -4,7 +4,7 @@ namespace FastRegister;
 
 class IncomingEmailValidator{
 	
-	public function returnBool($email) {
+	public function isAValidEmail($email) {
 		
 		//This function won't work unless it's contained in a WP action hook
 					
@@ -19,6 +19,10 @@ class IncomingEmailValidator{
 			$emailIsValid = FALSE;
 		}
 		return $emailIsValid;
+	}
+	
+	public function doesEmailAlreadyExist($email){
+		
 	}
 	
 	public function isAnActualEmail($email){
