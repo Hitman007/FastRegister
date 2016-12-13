@@ -20,8 +20,9 @@ class IncomingEmailHandler{
 				session_start();
 				global $wp;
 				$current_url = home_url(add_query_arg(array(),$wp->request));
+				$current_url = $current_url . $_SERVER['REQUEST_URI'];
 				$_SESSION['crg_login_redirect_url'] = $current_url;
-				die($current_url);
+				//die($current_url);
 				$CreateAndSignonNewUserBasedOnEmail = new CreateAndSignonNewUserBasedOnEmail;
 				$CreateAndSignonNewUserBasedOnEmail->createAndSignonUser($email);
 			}
