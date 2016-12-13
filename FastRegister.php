@@ -19,3 +19,4 @@ $FastRegisterPlugin = new FastRegisterPlugin;
 $FastRegisterPlugin->enableShortCode_fastRegister();
 $FastRegisterPlugin->enableSidebarWidget();
 $FastRegisterPlugin->enableFormListener();
+$FastRegisterPlugin->autoFillLoginScreenForm();

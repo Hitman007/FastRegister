@@ -35,4 +35,9 @@ class FastRegisterPlugin{
 		include_once 'FastRegisterSidebarWidget.class.php';
 	}
 	
+	public function autoFillLoginScreenForm(){
+		$loginURL = wp_login_url();
+		die($loginURL);
+	}
+	
 }
