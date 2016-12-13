@@ -29,7 +29,7 @@ class CreateAndSignonNewUserBasedOnEmail{
 			$crg_login_redirect_url = $_SESSION['crg_login_redirect_url'];
 			unset($_SESSION['crg_login_redirect_url']);
 			header($crg_login_redirect_url);
-			die('line 30');
+			die($crg_login_redirect_url);
 		}
 		//gets the current url:
 		$url =  get_site_url();
