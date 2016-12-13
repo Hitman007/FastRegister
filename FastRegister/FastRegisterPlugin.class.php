@@ -37,7 +37,6 @@ class FastRegisterPlugin{
 	
 	public function autoFillLoginScreenForm(){
 		$loginURL = wp_login_url();
-		die($loginURL);
 	}
 	
 }
