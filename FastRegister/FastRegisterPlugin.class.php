@@ -36,7 +36,11 @@ class FastRegisterPlugin{
 	}
 	
 	public function autoFillLoginScreenForm(){
-		$loginURL = wp_login_url();
+		if($_SERVER['REQUEST_URI'] == "/wp-login.php" or $_SERVER['REQUEST_URI'] == "/wp-login.php/" or $_SERVER['REQUEST_URI'] == "/login/" or $_SERVER['REQUEST_URI'] == "/login"){
+			include_once('LoginScreenAutoFiller.class.php');
+			$LoginScreenAutoFiller = new LoginScreenAutoFiller;
+			$LoginScreenAutoFiller->autoFillLoginScreenWithEmail();
+		}
 	}
 	
 }
