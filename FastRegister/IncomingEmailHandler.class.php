@@ -28,8 +28,8 @@ class IncomingEmailHandler{
 		if(email_exists($email)){
 			$_SESSION['crg_submitted_email'] = $email;
 			$baseURL = home_url(add_query_arg(array(),$wp->request));
-			$loginURL = $baseURL . "/login/";
-			//$loginURL = $baseURL . "/wp-login.php/";
+			//$loginURL = $baseURL . "/login/";
+			$loginURL = $baseURL . "/wp-login.php/";
 			
 			header("Location: $loginURL");
 			die();
