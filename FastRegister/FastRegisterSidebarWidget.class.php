@@ -43,7 +43,7 @@ add_action( 'widgets_init', function(){
 			if ( is_user_logged_in() ) {
 				$current_user = wp_get_current_user();
 				$name = $current_user->nickname;
-				echo ("Hello, $name!");
+				echo ("Hello, <a href = '/wp-admin/profile.php'>$name</a>!");
 			} else {
 				$output = <<<output
 			<form method = 'post'>
