@@ -1,6 +1,6 @@
 <?php
 
-//namespace FastRegister;
+//this file was copied and pasted from the codex
 
 
 add_action( 'widgets_init', function(){
