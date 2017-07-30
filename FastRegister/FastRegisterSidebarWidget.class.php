@@ -63,7 +63,7 @@ output;
 		 * @param array $instance Previously saved values from database.
 		 */
 		public function form( $instance ) {
-			$title = __( 'Sign Up for our Newsletter', 'text_domain' );
+			$title = __( 'Sign Up for the Newsletter', 'text_domain' );
 			?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
