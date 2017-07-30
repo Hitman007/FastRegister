@@ -1,0 +1,6 @@
+{
+    "require": {
+        "lucatume/wp-browser": "^1.21",
+        "codeception/mockery-module": "*"
+    }
+}

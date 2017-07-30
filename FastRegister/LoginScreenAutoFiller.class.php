@@ -19,7 +19,11 @@ class LoginScreenAutoFiller{
 	
 	public function doAutoFillLoginScreenWithEmail(){
 		session_start();
-		$email = $_SESSION['crg_submitted_email'];
+		if(isset($_SESSION['crg_submitted_email'])){
+			$email =$_SESSION['crg_submitted_email'];
+		}else{
+			$email = "";
+		}
 		$output = <<<OUTPUT
 <script>
 	jQuery( document ).ready(function() {

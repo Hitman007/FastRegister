@@ -6,5 +6,11 @@ namespace Helper;
 
 class Acceptance extends \Codeception\Module
 {
-
+    public function goToGoogle()
+    {
+        $I = $this;
+        //$I->wantTo('ssssssssssssssss');
+        //$I->addStep('vvvvvvvvvvvvvvv');
+    	$I->amOnUrl('http://google.com');
+    }
 }
